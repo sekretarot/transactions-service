@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    image: 2.3-slim-jessie
+    build: .
+    entrypoint: /transactions-service/docker-entrypoint.sh
+    command: bundle exec rails s -p 3002 -b '0.0.0.0'
+    volumes:
+    - .:/transactions-service
+    ports:
+    - "3002:3002"
