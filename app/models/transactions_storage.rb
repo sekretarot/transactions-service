@@ -3,10 +3,10 @@ class TransactionsStorage
   include Singleton
 
   def initialize
-    transactions_data = [{id: "TR3506988578", amount: 2000, account_number: 3506988578},
-                         {id: "TR3506988378", amount: 1460, account_number: 3506988422},
-                         {id: "TR3506988532", amount: -840, account_number: 3506988578},
-                         {id: "TR3506988422", amount: 2100, account_number: 3506988378}]
+    transactions_data = [{id: "TR3506988578", amount: 200, account_number: 3506988578},
+                         {id: "TR3506988378", amount: 1460, account_number: 3506988378},
+                         {id: "TR3506988532", amount: 3240, account_number: 3506988532},
+                         {id: "TR3506988422", amount: 2100, account_number: 3506988422}]
     @transactions = transactions_data.map do |transaction_hash|
       Transaction.new(transaction_hash)
     end
