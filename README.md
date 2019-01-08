@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### How to run in development
 
-Things you may want to cover:
+From the repository folder run: 
 
-* Ruby version
+`docker-compose up --build`
 
-* System dependencies
+This starts your Rails server **listening at port 3002** in a Docker container. 
 
-* Configuration
+### Example usage
 
-* Database creation
+#### Api endpoints 
 
-* Database initialization
+Get transactions for an account
 
-* How to run the test suite
+GET `/transactions/account?account_number=3506988532`
 
-* Services (job queues, cache servers, search engines, etc.)
+Create new transaction for account
 
-* Deployment instructions
-
-* ...
+POST `/transactions?account_number=3506988532&amount=500`
